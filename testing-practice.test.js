@@ -1,13 +1,36 @@
-const {capitalize} = require('./testing-practice.js');
+const { capitalize, reverseString } = require('./testing-practice.js');
 
 // A capitalize function that takes a string and returns it with the first character capitalized.
-test("banana becomes Banana", ()=> {
-  expect(capitalize("banana")).toBe("Banana");
-  expect(capitalize("b")).toBe("B");
-  expect(capitalize("banana cat")).toBe("Banana cat");
-  expect(capitalize("1")).toBe("1");
-  expect(capitalize(" ")).toBe(" ");
-  expect(capitalize("")).toBe("");
-  expect(capitalize(null)).toBe(null);
-  expect(capitalize(undefined)).toBe(undefined);    
+test("banana returns Banana", ()=> {
+    expect(capitalize("banana")).toBe("Banana");
 });
+
+test("b returns B",() => {
+    expect(capitalize("b")).toBe("B");
+});
+
+test("banana cat returns Banana cat",() => {
+    expect(capitalize("banana cat")).toBe("Banana cat");
+});
+
+test("'1' returns '1'",() => {
+    expect(capitalize("1")).toBe("1");
+});
+
+test("space returns space",() => {
+    expect(capitalize(" ")).toBe(" ");
+});
+
+test("empty string returns empty string",() => {
+    expect(capitalize("")).toBe("");
+});
+
+test("null and undefined returns null and undefined",() => {
+    expect(capitalize(null)).toBe(null);
+    expect(capitalize(undefined)).toBe(undefined);
+});
+
+// A reverseString function that takes a string and returns it reversed
+// test("a returns a", () => {
+//     expect(reverseString("a")).toBe("a");
+// });
